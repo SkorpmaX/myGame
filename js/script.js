@@ -148,7 +148,7 @@ let myGame = {
 
   createLine(kat) {
     kat.forEach(function (elem, index) {
-      let lineWrap = document.createElement('div');
+      let lineWrap = document.createElement('div');//TODO Сделать отдельную функцию для создания элемента. Параметры: (Родитель, Тэг, Класс)
       $(lineWrap).addClass('lineWrap');
       $('.gameWrap').append(lineWrap);
       let question = document.createElement('div');
@@ -171,10 +171,9 @@ let myGame = {
     $('.question').html(currentQuestion.text);
     for (let item in currentQuestion.answer) {
       if (item == 'true') continue;
-      let currentAnswerWrap = document.createElement('div');
+      let currentAnswerWrap = document.createElement('div'); //TODO Сделать отдельную функцию на уровне showFunction() для отрисовки ответа
       $('.var-answer').append(currentAnswerWrap);
       $(currentAnswerWrap).addClass('currentAnswerWrap');
-
       let currentAnswer = document.createElement('input');
       $(currentAnswerWrap).append(currentAnswer);
       $(currentAnswer).attr('id','question'+item);
@@ -190,14 +189,18 @@ let myGame = {
     $('.question-wrap').show(300);
   }
 };
+
 $(document).ready(function () {
   $('.question-elem').click(function () {
     myGame.showQuestion($(this));
   });
-  $('.close').click(function () {
+
+  $('.close').click(function () { //TODO Сделать отдельную функцию на уровне showFunction() для закрытия вопросю
     $('.question-wrap').hide(300);
     $('.currentAnswerWrap').remove();
   });
 });
 
+
+//TODO 1) Сделать функционал для кнопки "ответ" 2) Сделать счётчик на базе localStorage 3) Сделать маркировку уже сыгранного вопроса. (хранить state игры в localStorage)
 myGame.createLine(myGame.cat);
