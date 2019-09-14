@@ -1,0 +1,124 @@
+body{
+	background: #1014D2;
+}
+*{
+	margin:0;
+	padding: 0;
+	outline: none;
+	color: #FFF600;
+}
+.mainWrap{
+	width: 1200px;
+	height: 450px;
+	margin: 0 auto;
+}
+header{
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 40px;
+}
+h1{
+	font-size: 60px;
+}
+
+.gameWrap{
+	position: relative;
+}
+.gameWrap .lineWrap{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.gameWrap .lineWrap .name, .gameWrap .lineWrap .question-elem{
+	height: 75px;
+	display: flex;
+	align-items: center;
+	border: 1px solid #FFF600;
+	font-size: 20px;
+}
+.gameWrap .lineWrap .name{
+	width: 450px;
+	box-sizing: border-box;
+	padding-left: 15px;
+}
+.gameWrap .lineWrap .question-elem{
+	width: 150px;
+	box-sizing: border-box;
+	justify-content: center;
+	cursor: pointer;
+}
+.question-wrap{
+	background: #1014D2;
+	border: 1px solid  #FFF600;
+	box-sizing: border-box;
+	width: 100%;
+	height: 450px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.question-wrap .close{
+	width: 100px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top:0;
+	cursor: pointer;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.question-wrap .question
+{
+	font-size: 50px;
+	text-align: center;
+	padding-top: 125px;
+}
+.question-wrap .var-answer{
+	display: flex;
+	margin-top: 125px;
+	justify-content: space-around;
+	font-size: 26px;
+	position: absolute;
+	bottom: 59px;
+	width: 100%;
+
+
+}
+.question-wrap .var-answer input
+{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.question-wrap .var-answer .currentAnswerWrap{
+	display: flex;
+	justify-content: center;
+	border: 1px solid #FFF600;
+	padding: 10px;
+	flex-grow: 1;
+
+
+
+}
+.question-wrap .var-answer label{
+	margin-left: 10px;
+	cursor: pointer;
+
+}
+.question-wrap div.submit{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	text-align: center;
+	box-sizing: border-box;
+	border-top: 1px solid #FFF600;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 50px;
+}
